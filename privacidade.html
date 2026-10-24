@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Política de Privacidade — GeraQR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Mesmo tema (claro/escuro) do aplicativo -->
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('geraqr-theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+  })();
+</script>
+<style>
+  .policy { max-width: 720px; margin: 0 auto; padding: 8px 16px 48px; line-height: 1.65; }
+  .policy h1 { font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; margin: 24px 0 4px; }
+  .policy h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; margin: 28px 0 6px; }
+  .policy p, .policy li { color: var(--ink); }
+  .policy .meta { color: var(--ink-muted); font-size: 0.9rem; margin: 0 0 16px; }
+  .policy a { color: var(--blue); }
+  .policy ul { padding-left: 1.2rem; }
+  .policy table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 8px 0; }
+  .policy th, .policy td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  .policy th { background: var(--bg2); }
+  .back { display: inline-block; margin: 16px 16px 0; color: var(--blue); }
+</style>
+</head>
+<body>
+  <a class="back" href="index.html">← Voltar para o GeraQR</a>
+  <main class="policy">
+    <h1>Política de Privacidade do GeraQR</h1>
+    <p class="meta">Última atualização: 24 de outubro de 2026</p>
+
+    <p>O GeraQR é um gerador de QR Codes gratuito, sem anúncios, que funciona no seu navegador.
+    Esta política explica, de forma simples, quais dados são tratados quando você usa o GeraQR,
+    em conformidade com a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</p>
+
+    <h2>1. Quem é o responsável</h2>
+    <p><strong>Lucas Torres Tecnologia</strong><br>
+    Vitória, ES, Brasil<br>
+    Contato para assuntos de privacidade: <a href="mailto:lucastorrestecnologia01@gmail.com">lucastorrestecnologia01@gmail.com</a></p>
+
+    <h2>2. O que NÃO fazemos</h2>
+    <ul>
+      <li>O texto, o link ou o contato que você digita <strong>não é enviado, armazenado nem lido</strong> por nós. O QR Code é calculado e desenhado dentro do seu próprio navegador.</li>
+      <li>Não pedimos cadastro, nome, e-mail, telefone ou qualquer dado pessoal.</li>
+      <li>Não usamos cookies, ferramentas de análise de uso (como o Google Analytics), publicidade nem rastreamento.</li>
+      <li>Não vendemos nem compartilhamos dados com terceiros para fins comerciais.</li>
+    </ul>
+
+    <h2>3. O que fica no seu dispositivo</h2>
+    <p>O GeraQR guarda no armazenamento local do navegador (<code>localStorage</code>) apenas uma preferência:
+    o tema <strong>claro ou escuro</strong> escolhido por você (chave <code>geraqr-theme</code>).
+    Essa informação fica só no seu dispositivo e pode ser apagada a qualquer momento limpando os dados do site no navegador.</p>
+    <p>Os botões <em>Copiar</em> e <em>Baixar PNG</em> só agem quando você clica neles: o primeiro envia a imagem do QR Code para a área de transferência do seu aparelho, e o segundo salva o arquivo no seu aparelho.</p>
+
+    <h2>4. Serviços de terceiros usados pelo site</h2>
+    <p>Mesmo sem coletarmos dados, para a página abrir e funcionar o seu navegador faz pedidos a serviços de terceiros. Nesses pedidos, esses serviços podem registrar dados técnicos de conexão, como <strong>endereço IP</strong>, tipo de navegador e data e hora do acesso, conforme as políticas deles:</p>
+    <table>
+      <thead><tr><th>Serviço</th><th>Para quê</th><th>Política</th></tr></thead>
+      <tbody>
+        <tr><td>Netlify</td><td>Hospedagem do site</td><td><a href="https://www.netlify.com/privacy/" rel="noopener">netlify.com/privacy</a></td></tr>
+        <tr><td>Cloudflare (cdnjs)</td><td>Entrega da biblioteca <em>qrcode-generator</em> (versão 2.0.4), que calcula o QR Code</td><td><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">cloudflare.com/privacypolicy</a></td></tr>
+        <tr><td>Google Fonts</td><td>Entrega das fontes de texto (Space Grotesk e Inter)</td><td><a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></td></tr>
+      </tbody>
+    </table>
+    <p>Esses serviços atuam por conta própria sobre os dados técnicos que recebem. A Lucas Torres Tecnologia não tem acesso a esses registros.</p>
+
+    <h2>5. Base legal e finalidade</h2>
+    <p>Como o GeraQR não coleta dados pessoais, não há tratamento de dados pessoais por nós além do descrito acima.
+    O armazenamento da preferência de tema é feito no seu dispositivo, para melhorar a sua experiência, a seu pedido ao clicar no botão de tema.</p>
+
+    <h2>6. Seus direitos</h2>
+    <p>Pela LGPD (art. 18), você pode pedir informações sobre o tratamento dos seus dados, acesso, correção, eliminação, portabilidade ou a revogação de consentimento.
+    Como não guardamos seus dados, normalmente não teremos o que informar ou apagar, mas você pode escrever para
+    <a href="mailto:lucastorrestecnologia01@gmail.com">lucastorrestecnologia01@gmail.com</a> a qualquer momento.
+    Você também pode contatar a Autoridade Nacional de Proteção de Dados (ANPD) em <a href="https://www.gov.br/anpd" rel="noopener">gov.br/anpd</a>.</p>
+
+    <h2>7. Segurança</h2>
+    <p>Como o QR Code é gerado no seu navegador e o conteúdo não é enviado a nenhum servidor, o que você digita não trafega pela internet por causa do GeraQR.
+    Lembre-se de que quem tiver o QR Code poderá ler o conteúdo dele. Não use QR Codes para guardar senhas ou informações sigilosas.</p>
+
+    <h2>8. Crianças e adolescentes</h2>
+    <p>O GeraQR não coleta dados de nenhum usuário, inclusive de crianças e adolescentes.</p>
+
+    <h2>9. Mudanças nesta política</h2>
+    <p>Podemos atualizar esta política. A data de &ldquo;Última atualização&rdquo; no topo mostra quando houve a última mudança.</p>
+
+    <h2>10. Código aberto</h2>
+    <p>O código do GeraQR é público em <a href="https://github.com/lucast-tech/geraqr" rel="noopener">github.com/lucast-tech/geraqr</a>, e qualquer pessoa pode conferir o que o programa faz.</p>
+  </main>
+</body>
+</html>
