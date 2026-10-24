@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<!-- Define o tema (claro/escuro) antes de a página aparecer, para não piscar -->
+<link rel="icon" type="image/png" href="logo.png">
 <script>
   (function () {
     try {
@@ -20,17 +20,10 @@
 </script>
 </head>
 <body>
-  <!-- Cabeçalho: logotipo, nome e botão de alternar tema -->
   <div class="app">
     <header class="topbar">
       <div class="brand">
-        <span class="mark" aria-hidden="true">
-          <span class="mark-corner tl"></span>
-          <span class="mark-corner tr"></span>
-          <span class="mark-corner bl"></span>
-          <span class="mark-corner br"></span>
-          <span class="mark-dot"></span>
-        </span>
+        <img src="logo.png" alt="GeraQR" class="mark">
         <div class="brand-text">
           <span class="brand-name">GeraQR</span>
           <span class="brand-tag">Criação simples e rápida de QR Codes</span>
@@ -43,14 +36,12 @@
     </header>
 
     <main>
-      <!-- Entrada: texto/link que vira QR Code (limite de 1500 caracteres) -->
       <section class="panel">
         <label for="qrInput" class="field-label">Texto, link ou contato</label>
         <textarea id="qrInput" class="field" rows="3" maxlength="1500" placeholder="Cole ou digite aqui o que você quer transformar em QR Code..."></textarea>
         <button id="generateBtn" class="btn-primary" type="button">Gerar QR Code</button>
       </section>
 
-      <!-- Área de pré-visualização com os cantos de "mira" -->
       <section class="viewfinder" id="viewfinder" aria-label="Pré-visualização do QR Code">
         <span class="corner tl"></span>
         <span class="corner tr"></span>
@@ -62,7 +53,6 @@
         </div>
       </section>
 
-      <!-- Botões que só aparecem depois de gerar o QR Code -->
       <div class="actions" id="actions" hidden>
         <button id="copyBtn" class="btn-secondary" type="button">Copiar</button>
         <button id="downloadBtn" class="btn-secondary" type="button">Baixar PNG</button>
@@ -70,15 +60,12 @@
       <p id="toast" class="toast" role="status" aria-live="polite"></p>
     </main>
 
-    <!-- Rodapé -->
     <footer class="footnote">
       <p>Gerado direto no seu navegador. Sem anúncios e sem enviar o seu texto a nenhum servidor. <a href="privacidade.html">Política de Privacidade</a></p>
     </footer>
   </div>
 
-  <!-- Biblioteca que calcula o QR Code (carregada da CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/2.0.4/qrcode.min.js"></script>
-  <!-- Lógica do app -->
+  <script src="qrcode.lib.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
