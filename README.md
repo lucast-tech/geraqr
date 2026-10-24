@@ -25,5 +25,16 @@ HTML, CSS e JavaScript puro, mais:
 
 ## Privacidade
 O texto digitado não sai do seu navegador. O site não usa cookies nem análise
-de uso. Veja os detalhes em [privacidade.html](privacidade.html).
+de uso. Na primeira visita aparece um aviso com os botões **Concordo** e
+**Não concordo**:
+- **Concordo** libera o app, guarda a escolha e o tema neste aparelho e carrega
+  as fontes do Google Fonts;
+- **Não concordo** mantém o app bloqueado e não salva nem carrega nada.
+
+A Política de Privacidade abre dentro da própria página (`#privacidade`), sem
+recarregar. O link "Alterar minha escolha", no rodapé, mostra o aviso de novo.
 Contato: lucastorrestecnologia01@gmail.com
+
+## Arquivos
+`index.html` (página e política), `style.css`, `script.js` (gerador),
+`lgpd.js` (aviso e política), `qrcode.lib.js` (biblioteca) e `logo.webp`.
